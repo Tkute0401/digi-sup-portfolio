@@ -133,11 +133,11 @@ export function EducationalStack() {
         {/* Right: The Physical Stack */}
         <div className="col-span-1 lg:col-span-7 relative flex flex-col gap-[40vh] pb-[20vh] pt-[10vh]">
           {/* Mobile Header (Hidden on Desktop) */}
-          <div className="block lg:hidden mb-12">
-            <h2 className="font-display font-black text-6xl uppercase tracking-tighter leading-[0.9]">
+          <div className="block lg:hidden mb-8">
+            <h2 className="font-display font-black text-5xl md:text-6xl uppercase tracking-tighter leading-[0.9]">
               The Academy
             </h2>
-            <p className="font-sans text-sm font-light text-zinc-400 mt-4 leading-relaxed">
+            <p className="font-sans text-sm font-light text-zinc-400 mt-4 leading-relaxed max-w-sm">
               Authority built on camera. 8 educational masterclasses engineered for retention.
             </p>
           </div>
@@ -145,7 +145,7 @@ export function EducationalStack() {
           {educationalReels.map((p, i) => (
             <div 
               key={p.id} 
-              className="edu-card sticky top-[15vh] w-full max-w-[450px] aspect-[9/16] mx-auto lg:mx-0 lg:ml-auto rounded-[2rem] overflow-hidden border border-white/10 bg-[#050505] shadow-[0_-20px_40px_-15px_rgba(0,0,0,0.8)] cursor-none origin-top transition-all duration-700"
+              className="edu-card sticky top-[12vh] md:top-[15vh] w-full max-w-[400px] md:max-w-[450px] aspect-[9/16] mx-auto lg:mx-0 lg:ml-auto rounded-[2rem] overflow-hidden border border-white/10 bg-[#050505] shadow-[0_-20px_40px_-15px_rgba(0,0,0,0.8)] cursor-none origin-top transition-all duration-700"
               style={{ zIndex: i + 10 }}
             >
               <video 

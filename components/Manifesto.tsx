@@ -68,14 +68,14 @@ export function Manifesto() {
       {/* Background grain or texture can go here if needed */}
       <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black z-10 pointer-events-none"></div>
 
-      <div className="flex flex-col gap-2 md:gap-6 whitespace-nowrap w-[200vw] -ml-[50vw] text-center z-0">
-        <h2 ref={line1Ref} className="font-display font-black text-[15vw] md:text-[9vw] leading-[0.8] uppercase tracking-tighter opacity-90 text-stroke hover:text-white transition-colors duration-500">
+      <div className="flex flex-col gap-3 md:gap-6 whitespace-nowrap w-[200vw] -ml-[50vw] text-center z-0">
+        <h2 ref={line1Ref} className="font-display font-black text-[12vw] md:text-[9vw] leading-[0.85] uppercase tracking-tighter opacity-90 text-stroke hover:text-white transition-colors duration-500">
           We Don't Just
         </h2>
-        <h2 ref={line2Ref} className="font-display font-black text-[15vw] md:text-[9vw] leading-[0.8] uppercase tracking-tighter text-blue-600">
+        <h2 ref={line2Ref} className="font-display font-black text-[12vw] md:text-[9vw] leading-[0.85] uppercase tracking-tighter text-blue-600">
           Create Content.
         </h2>
-        <h2 ref={line3Ref} className="font-display font-black text-[15vw] md:text-[9vw] leading-[0.8] uppercase tracking-tighter opacity-90 text-stroke hover:text-white transition-colors duration-500">
+        <h2 ref={line3Ref} className="font-display font-black text-[12vw] md:text-[9vw] leading-[0.85] uppercase tracking-tighter opacity-90 text-stroke hover:text-white transition-colors duration-500">
           Engineer Attention.
         </h2>
       </div>

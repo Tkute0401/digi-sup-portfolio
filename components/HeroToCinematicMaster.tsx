@@ -282,7 +282,7 @@ export function HeroToCinematicMaster() {
 
         <div 
           ref={heroMarqueeRef}
-          className="absolute z-10 w-[80vw] h-[60vh] overflow-hidden rounded-[2rem] border border-white/10"
+          className="absolute z-10 w-[95vw] md:w-[80vw] h-[75vh] md:h-[60vh] overflow-hidden rounded-[2rem] border border-white/10"
         >
           <div className="w-[200vw] h-full flex">
             {[...Array(2)].map((_, i) => (
@@ -319,12 +319,12 @@ export function HeroToCinematicMaster() {
           </h2>
         </div>
         
-        <div className="w-full h-[60vh] overflow-visible mt-24">
-          <div ref={trackRef} className="flex h-full w-max px-[calc(50vw-140px)] md:px-[calc(50vw-175px)]">
+        <div className="w-full h-[65vh] md:h-[75vh] overflow-visible mt-16 md:mt-24">
+          <div ref={trackRef} className="flex h-full w-max px-[calc(50vw-(65vh*9/32))] md:px-[calc(50vw-(75vh*9/32))]">
             {galleryItems.map((reel, idx) => (
               <div 
                 key={reel.id} 
-                className={`cinematic-item relative h-full w-[280px] md:w-[350px] mx-4 shrink-0 transition-all duration-700 ease-out origin-center rounded-2xl overflow-hidden hover-target border border-white/10`}
+                className={`cinematic-item relative h-full aspect-[9/16] mx-2 md:mx-4 shrink-0 transition-all duration-700 ease-out origin-center rounded-2xl overflow-hidden hover-target border border-white/10`}
               >
                 <video 
                   src={getVideoSrc(reel.src)}
