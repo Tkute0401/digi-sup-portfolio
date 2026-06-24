@@ -1,60 +1,31 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export function Manifesto() {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const line1Ref = useRef<HTMLHeadingElement>(null);
-  const line2Ref = useRef<HTMLHeadingElement>(null);
-  const line3Ref = useRef<HTMLHeadingElement>(null);
+  const textRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     
     const ctx = gsap.context(() => {
-      // Line 1 moves Left
-      gsap.fromTo(line1Ref.current, 
-        { xPercent: 10 },
+      const words = gsap.utils.toArray<HTMLElement>(".manifesto-word");
+      
+      gsap.fromTo(words, 
+        { opacity: 0.1, y: 20 },
         {
-          xPercent: -10,
+          opacity: 1,
+          y: 0,
+          stagger: 0.1,
           ease: "none",
           scrollTrigger: {
             trigger: sectionRef.current,
-            start: "top bottom",
-            end: "bottom top",
-            scrub: 1.5,
-          }
-        }
-      );
-
-      // Line 2 moves Right
-      gsap.fromTo(line2Ref.current, 
-        { xPercent: -10 },
-        {
-          xPercent: 10,
-          ease: "none",
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top bottom",
-            end: "bottom top",
-            scrub: 1.5,
-          }
-        }
-      );
-
-      // Line 3 moves Left (slightly faster for parallax feel)
-      gsap.fromTo(line3Ref.current, 
-        { xPercent: 15 },
-        {
-          xPercent: -15,
-          ease: "none",
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top bottom",
-            end: "bottom top",
-            scrub: 1.5,
+            start: "top 60%",
+            end: "bottom 90%",
+            scrub: true,
           }
         }
       );
@@ -63,20 +34,25 @@ export function Manifesto() {
     return () => ctx.revert();
   }, []);
 
-  return (
-    <section id="agency" ref={sectionRef} className="h-[60vh] md:h-[80vh] flex flex-col justify-center overflow-hidden bg-black text-white border-y border-white/10 relative">
-      {/* Background grain or texture can go here if needed */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black z-10 pointer-events-none"></div>
+  const text = "We Don't Just Create Content. We Engineer Attention.";
+  const words = text.split(" ");
 
-      <div className="flex flex-col gap-3 md:gap-6 whitespace-nowrap w-[200vw] -ml-[50vw] text-center z-0">
-        <h2 ref={line1Ref} className="font-display font-black text-[10vw] md:text-[9vw] leading-[0.85] uppercase tracking-tighter opacity-90 text-stroke hover:text-white transition-colors duration-500">
-          We Don't Just
-        </h2>
-        <h2 ref={line2Ref} className="font-display font-black text-[10vw] md:text-[9vw] leading-[0.85] uppercase tracking-tighter text-blue-600">
-          Create Content.
-        </h2>
-        <h2 ref={line3Ref} className="font-display font-black text-[10vw] md:text-[9vw] leading-[0.85] uppercase tracking-tighter opacity-90 text-stroke hover:text-white transition-colors duration-500">
-          Engineer Attention.
+  return (
+    <section id="agency" ref={sectionRef} className="min-h-screen flex flex-col justify-center items-center bg-black text-white px-6 md:px-12 py-24 md:py-32 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black z-10 pointer-events-none"></div>
+      
+      <div ref={textRef} className="max-w-[1400px] mx-auto text-center z-20">
+        <h2 className="font-display font-black text-[13vw] md:text-8xl lg:text-[9rem] uppercase tracking-tighter leading-[0.85] flex flex-wrap justify-center">
+          {words.map((word, idx) => (
+            <span 
+              key={idx} 
+              className={`manifesto-word inline-block mr-[2vw] mb-4 md:mb-6 transition-colors duration-300 ${
+                word.includes("Content.") || word.includes("Attention.") ? "text-blue-600" : "text-white"
+              }`}
+            >
+              {word}
+            </span>
+          ))}
         </h2>
       </div>
     </section>

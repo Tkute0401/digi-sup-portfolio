@@ -30,7 +30,8 @@ export function Navbar() {
     >
       <div className="flex items-center gap-4 hover-target">
         <a href="#work" onClick={(e) => scrollToSection(e, 'work')}>
-          <img src="/logo.png" alt="Digital Supremacy" className="h-6 md:h-8 object-contain" />
+          <img src="/logo.png" alt="Digital Supremacy" className="hidden md:block h-8 object-contain" />
+          <img src="/logo-mobile.png" alt="Digital Supremacy" className="block md:hidden h-10 object-contain" />
         </a>
       </div>
       

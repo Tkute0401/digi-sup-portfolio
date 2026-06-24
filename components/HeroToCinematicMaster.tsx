@@ -282,7 +282,7 @@ export function HeroToCinematicMaster() {
 
         <div 
           ref={heroMarqueeRef}
-          className="absolute z-10 w-[95vw] md:w-[80vw] h-[75vh] md:h-[60vh] overflow-hidden rounded-[2rem] border border-white/10"
+          className="absolute z-10 w-[80vw] md:w-[50vw] h-[50vh] md:h-[40vh] overflow-hidden rounded-[2rem] border border-white/10"
         >
           <div className="w-[200vw] h-full flex">
             {[...Array(2)].map((_, i) => (

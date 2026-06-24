@@ -111,7 +111,7 @@ export function EducationalStack() {
   }, []);
 
   return (
-    <section id="services" ref={containerRef} className="relative w-full bg-zinc-950 text-white pb-[30vh]">
+    <section id="services" ref={containerRef} className="relative w-full bg-zinc-950 text-white pb-[10vh] md:pb-[30vh]">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 w-full max-w-[1400px] mx-auto pt-32 px-4 md:px-12 relative">
         
         {/* Left: Sticky Typography */}
@@ -131,7 +131,7 @@ export function EducationalStack() {
         </div>
 
         {/* Right: The Physical Stack */}
-        <div className="col-span-1 lg:col-span-7 relative flex flex-col gap-[40vh] pb-[20vh] pt-[10vh]">
+        <div className="col-span-1 lg:col-span-7 relative flex flex-col gap-[20vh] md:gap-[40vh] pb-[10vh] md:pb-[20vh] pt-[5vh] lg:pt-[10vh]">
           {/* Mobile Header (Hidden on Desktop) */}
           <div className="block lg:hidden mb-8">
             <h2 className="font-display font-black text-4xl md:text-5xl uppercase tracking-tighter leading-[0.9]">
