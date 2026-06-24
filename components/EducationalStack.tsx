@@ -134,7 +134,7 @@ export function EducationalStack() {
         <div className="col-span-1 lg:col-span-7 relative flex flex-col gap-[40vh] pb-[20vh] pt-[10vh]">
           {/* Mobile Header (Hidden on Desktop) */}
           <div className="block lg:hidden mb-8">
-            <h2 className="font-display font-black text-5xl md:text-6xl uppercase tracking-tighter leading-[0.9]">
+            <h2 className="font-display font-black text-4xl md:text-5xl uppercase tracking-tighter leading-[0.9]">
               The Academy
             </h2>
             <p className="font-sans text-sm font-light text-zinc-400 mt-4 leading-relaxed max-w-sm">

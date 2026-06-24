@@ -310,7 +310,7 @@ export function HeroToCinematicMaster() {
 
       {/* 2. CINEMATIC GALLERY */}
       <div ref={cinematicSectionRef} className="absolute inset-0 flex flex-col justify-center opacity-0" style={{ zIndex: 0 }}>
-        <div className="absolute top-12 md:top-24 left-6 md:left-12 z-20 mix-blend-difference">
+        <div className="absolute top-24 md:top-32 left-6 md:left-12 z-20 mix-blend-difference">
           <p className="font-sans text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] text-blue-500 mb-2">
             Director's Cut
           </p>

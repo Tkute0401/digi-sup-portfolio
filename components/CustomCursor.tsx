@@ -58,7 +58,7 @@ export function CustomCursor() {
   return (
     <div
       ref={cursorRef}
-      className="fixed top-0 left-0 flex items-center justify-center w-5 h-5 pointer-events-none z-[10000] -translate-x-1/2 -translate-y-1/2 mix-blend-difference"
+      className="fixed top-0 left-0 hidden md:flex items-center justify-center w-5 h-5 pointer-events-none z-[10000] -translate-x-1/2 -translate-y-1/2 mix-blend-difference"
     >
       <div 
         ref={scaleRef}
