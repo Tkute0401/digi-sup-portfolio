@@ -38,7 +38,7 @@ export function Manifesto() {
   const words = text.split(" ");
 
   return (
-    <section id="agency" ref={sectionRef} className="min-h-screen flex flex-col justify-center items-center bg-black text-white px-6 md:px-12 py-24 md:py-32 relative overflow-hidden">
+    <section id="agency" ref={sectionRef} className="flex flex-col justify-center items-center bg-black text-white px-6 md:px-12 py-[15vh] md:py-[20vh] relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black z-10 pointer-events-none"></div>
       
       <div ref={textRef} className="max-w-[1400px] mx-auto text-center z-20">

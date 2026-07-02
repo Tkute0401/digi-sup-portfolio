@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export function Navbar() {
@@ -30,8 +31,8 @@ export function Navbar() {
     >
       <div className="flex items-center gap-4 hover-target">
         <a href="#work" onClick={(e) => scrollToSection(e, 'work')}>
-          <img src="/logo.png" alt="Digital Supremacy" className="hidden md:block h-8 object-contain" />
-          <img src="/logo-mobile.png" alt="Digital Supremacy" className="block md:hidden h-10 object-contain" />
+          <Image src="/logo.png" alt="Digital Supremacy" width={200} height={32} className="hidden md:block h-8 w-auto object-contain" priority />
+          <Image src="/logo-mobile.png" alt="Digital Supremacy" width={200} height={40} className="block md:hidden h-10 w-auto object-contain" priority />
         </a>
       </div>
       
@@ -42,7 +43,7 @@ export function Navbar() {
       </nav>
 
       <button onClick={(e) => scrollToSection(e as any, 'contact')} className="hover-target bg-white text-black font-sans font-bold uppercase text-xs px-8 py-3 rounded-full hover:bg-blue-600 hover:text-white transition-colors duration-300">
-        Let's Talk
+        Let&apos;s Talk
       </button>
     </header>
   );

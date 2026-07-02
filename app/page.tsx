@@ -1,9 +1,11 @@
+import dynamic from 'next/dynamic';
 import { Preloader } from "@/components/Preloader";
 import { Navbar } from "@/components/Navbar";
 import { HeroToCinematicMaster } from "@/components/HeroToCinematicMaster";
-import { Manifesto } from "@/components/Manifesto";
-import { EducationalStack } from "@/components/EducationalStack";
-import { Footer } from "@/components/Footer";
+
+const Manifesto = dynamic(() => import('@/components/Manifesto').then(mod => mod.Manifesto));
+const EducationalStack = dynamic(() => import('@/components/EducationalStack').then(mod => mod.EducationalStack));
+const Footer = dynamic(() => import('@/components/Footer').then(mod => mod.Footer));
 
 export default function Home() {
   return (
