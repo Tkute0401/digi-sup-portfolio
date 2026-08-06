@@ -18,15 +18,26 @@ const unbounded = Unbounded({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://creatives.digitalsupremacy.in"),
   title: "Digital Supremacy | Creative Department",
   description: "Showcase of our premium reels and shortform content.",
   applicationName: "Digital Supremacy",
+  keywords: ["Digital Supremacy", "Creative Department", "Nashik", "Video Editing", "Reels", "Shortform Content", "Digital Marketing"],
   openGraph: {
     title: "Digital Supremacy | Creative Department",
     description: "Showcase of our premium reels and shortform content.",
     siteName: "Digital Supremacy",
+    url: "https://creatives.digitalsupremacy.in",
     locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Digital Supremacy | Creative Department",
+    description: "Showcase of our premium reels and shortform content.",
+  },
+  alternates: {
+    canonical: "/",
   },
   appleWebApp: {
     title: "Digital Supremacy",
