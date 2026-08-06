@@ -20,6 +20,17 @@ const unbounded = Unbounded({
 export const metadata: Metadata = {
   title: "Digital Supremacy | Creative Department",
   description: "Showcase of our premium reels and shortform content.",
+  applicationName: "Digital Supremacy",
+  openGraph: {
+    title: "Digital Supremacy | Creative Department",
+    description: "Showcase of our premium reels and shortform content.",
+    siteName: "Digital Supremacy",
+    locale: "en_US",
+    type: "website",
+  },
+  appleWebApp: {
+    title: "Digital Supremacy",
+  }
 };
 
 export default function RootLayout({
@@ -31,6 +42,17 @@ export default function RootLayout({
     <html lang="en" className="dark" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://res.cloudinary.com" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Digital Supremacy",
+              url: "https://creatives.digitalsupremacy.in/",
+            }),
+          }}
+        />
       </head>
       <body
         className={`${inter.variable} ${unbounded.variable} font-sans antialiased bg-black text-white`}
